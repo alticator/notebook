@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FgW-0z-JDc">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,54 +8,137 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="G0l-jA-ITa">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notebook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqR-dt-CkS">
-                                <rect key="frame" x="0.0" y="0.0" width="820" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Alticator Notebook" id="Dbi-Lh-QO2"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-jo-CdV">
-                                <rect key="frame" x="59" y="84" width="114" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Quick Draw"/>
-                                <connections>
-                                    <segue destination="yMi-kt-CCi" kind="show" id="C7E-rY-rlC"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="FgW-0z-JDc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7yN-Uk-T4e">
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Pcg-tM-TF3" kind="relationship" relationship="rootViewController" id="YJl-Mk-Kst"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJV-MX-fEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.29268292682926" y="138.81355932203391"/>
+            <point key="canvasLocation" x="-516" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Drawing View-->
         <scene sceneID="nrx-o1-38f">
             <objects>
-                <viewController id="yMi-kt-CCi" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaB-7t-1y0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Drawing View Controller" id="yMi-kt-CCi" userLabel="Drawing View" customClass="DrawingViewController" customModule="Notebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LAa-5D-PnN">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBk-4W-Bif">
+                                <rect key="frame" x="-20" y="0.0" width="1200" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="jMx-F8-zeJ"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pig-og-NYO" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="44" width="1180" height="732"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AcF-we-STY">
+                                <rect key="frame" x="0.0" y="776" width="1180" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Board 2" id="IyB-Ec-pFy">
+                                        <connections>
+                                            <segue destination="4QK-zH-b5L" kind="show" id="ADm-8i-gLg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ifm-N0-yQP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ooQ-Xe-2jD"/>
+                    <navigationItem key="navigationItem" title="Board 1" id="ooQ-Xe-2jD"/>
+                    <connections>
+                        <outlet property="canvasView" destination="pig-og-NYO" id="vrp-Tc-Wh0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UaB-7t-1y0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="139"/>
+            <point key="canvasLocation" x="1014" y="138"/>
+        </scene>
+        <!--Drawing View-->
+        <scene sceneID="xsN-co-HYC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jo5-YW-Ljg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Drawing View Controller" id="4QK-zH-b5L" userLabel="Drawing View" customClass="SecondBoardViewController" customModule="Notebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CKF-hW-E54">
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ou8-6X-NN7">
+                                <rect key="frame" x="-20" y="0.0" width="1200" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="4S9-nM-e5g"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-Lj-XUn" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="44" width="1180" height="732"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B2s-fT-GpK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Board 2" id="jqS-kl-jMm"/>
+                    <connections>
+                        <outlet property="canvasView" destination="Fcj-Lj-XUn" id="alY-2n-hDX"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1014" y="961"/>
+        </scene>
+        <!--Boards-->
+        <scene sceneID="c6j-pB-Bct">
+            <objects>
+                <viewController title="Boards" id="Pcg-tM-TF3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qkg-Pq-xCs">
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqk-V3-tXY">
+                                <rect key="frame" x="521" y="387.5" width="138" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Go to Board">
+                                    <color key="titleColor" red="0.70749994179677689" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yMi-kt-CCi" kind="show" id="nVP-49-Hrg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alticator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLe-xf-Yvu">
+                                <rect key="frame" x="558" y="713" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cux-Qu-9ec"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wqk-V3-tXY" firstAttribute="centerX" secondItem="qkg-Pq-xCs" secondAttribute="centerX" id="1lD-y5-DJ7"/>
+                            <constraint firstItem="Wqk-V3-tXY" firstAttribute="centerY" secondItem="qkg-Pq-xCs" secondAttribute="centerY" id="QNk-X5-W7K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alticator Notebook" id="736-3i-aH5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZy-M1-vqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="137.5609756097561"/>
         </scene>
     </scenes>
     <resources>

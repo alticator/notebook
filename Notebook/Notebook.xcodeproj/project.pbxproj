@@ -15,6 +15,9 @@
 		1152915125E02CDE00A367F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1152914F25E02CDE00A367F1 /* LaunchScreen.storyboard */; };
 		1152915C25E02CDF00A367F1 /* NotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152915B25E02CDF00A367F1 /* NotebookTests.swift */; };
 		1152916725E02CDF00A367F1 /* NotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152916625E02CDF00A367F1 /* NotebookUITests.swift */; };
+		1152918B25E0F83B00A367F1 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152918A25E0F83B00A367F1 /* DrawingViewController.swift */; };
+		115291E425E24A3A00A367F1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115291E325E24A3A00A367F1 /* Data.swift */; };
+		115291F425E25F3900A367F1 /* SecondBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115291F325E25F3900A367F1 /* SecondBoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1152916225E02CDF00A367F1 /* NotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1152916625E02CDF00A367F1 /* NotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookUITests.swift; sourceTree = "<group>"; };
 		1152916825E02CDF00A367F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1152918A25E0F83B00A367F1 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		115291E325E24A3A00A367F1 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		115291F325E25F3900A367F1 /* SecondBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		1152914325E02CD900A367F1 /* Notebook */ = {
 			isa = PBXGroup;
 			children = (
+				115291E325E24A3A00A367F1 /* Data.swift */,
 				1152914425E02CD900A367F1 /* AppDelegate.swift */,
 				1152914625E02CD900A367F1 /* SceneDelegate.swift */,
 				1152914825E02CD900A367F1 /* ViewController.swift */,
+				1152918A25E0F83B00A367F1 /* DrawingViewController.swift */,
+				115291F325E25F3900A367F1 /* SecondBoardViewController.swift */,
 				1152914A25E02CD900A367F1 /* Main.storyboard */,
 				1152914D25E02CDE00A367F1 /* Assets.xcassets */,
 				1152914F25E02CDE00A367F1 /* LaunchScreen.storyboard */,
@@ -259,6 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1152914925E02CD900A367F1 /* ViewController.swift in Sources */,
+				115291F425E25F3900A367F1 /* SecondBoardViewController.swift in Sources */,
+				115291E425E24A3A00A367F1 /* Data.swift in Sources */,
+				1152918B25E0F83B00A367F1 /* DrawingViewController.swift in Sources */,
 				1152914525E02CD900A367F1 /* AppDelegate.swift in Sources */,
 				1152914725E02CD900A367F1 /* SceneDelegate.swift in Sources */,
 			);
