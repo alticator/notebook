@@ -1,2 +1,2 @@
-# notebook
-Alticator Notebook
+# Alticator Notebook
+Draw and handwrite notes easily
